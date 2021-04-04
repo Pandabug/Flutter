@@ -16,42 +16,57 @@ class RecomendsPlants extends StatelessWidget {
         children: [
           RecomendPlantCard(
             image: 'assets/images/image_1.png',
-            title: 'Smantha',
-            country: 'Russia',
+            title: 'Giorgia',
+            country: 'Italia',
             price: 440,
             press: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailsScreen(),
+                  builder: (context) => DetailsScreen(
+                    // image: 'assets/images/image_1.png',
+                    title: 'Giorgia',
+                    country: 'Italia',
+                    price: 440,
+                  ),
                 ),
               );
             },
           ),
           RecomendPlantCard(
             image: 'assets/images/image_2.png',
-            title: 'Smantha',
-            country: 'Russia',
-            price: 440,
+            title: 'Violet',
+            country: 'England',
+            price: 230,
             press: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailsScreen(),
+                  builder: (context) => DetailsScreen(
+                    // image: 'assets/images/image_2.png',
+                    title: 'Violet',
+                    country: 'England',
+                    price: 230,
+                  ),
                 ),
               );
             },
           ),
           RecomendPlantCard(
             image: 'assets/images/image_3.png',
-            title: 'Smantha',
+            title: 'Dina',
             country: 'Russia',
-            price: 440,
+            price: 850,
             press: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailsScreen(),
+                  builder: (context) => DetailsScreen(
+                    // image: 'assets/images/image_3.png',
+                    title: 'Dina',
+                    country: 'Russia',
+                    price: 850,
+                  ),
                 ),
               );
             },

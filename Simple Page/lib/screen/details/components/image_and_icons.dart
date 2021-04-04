@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:simplepage/screen/details/screen%20details/details/back_arrow.dart';
 
 import '../../../costants.dart';
 import 'icon_card.dart';
@@ -8,9 +8,11 @@ class ImageAndIcons extends StatelessWidget {
   const ImageAndIcons({
     Key key,
     @required this.size,
+    this.image,
   }) : super(key: key);
 
   final Size size;
+  final String image;
 
   @override
   Widget build(BuildContext context) {
@@ -27,17 +29,7 @@ class ImageAndIcons extends StatelessWidget {
                 ),
                 child: Column(
                   children: <Widget>[
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: IconButton(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                        icon: SvgPicture.asset('assets/icons/back_arrow.svg'),
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                      ),
-                    ),
+                    BackArrowIcon(image: image),
                     Spacer(),
                     IconCard(icon: 'assets/icons/sun.svg'),
                     IconCard(icon: 'assets/icons/icon_2.svg'),
