@@ -15,22 +15,23 @@ class PrincipalInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Container(
-          child: Row(
-            children: <Widget>[
-              IconCard(icon: icon),
-              Text(
-                title,
-                style: TextStyle(
-                  color: kPrimaryColor,
-                ),
+    return Padding(
+      padding: EdgeInsets.only(left: kDefaultPadding * 0.2),
+      child: Row(
+        children: <Widget>[
+          IconCard(icon: icon),
+          Padding(
+            padding: EdgeInsets.only(left: kDefaultPadding * 0.8),
+            child: Text(
+              title,
+              style: TextStyle(
+                color: kPrimaryColor,
+                fontSize: 18,
               ),
-            ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

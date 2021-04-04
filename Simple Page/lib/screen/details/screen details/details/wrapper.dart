@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:simplepage/screen/home/components/featured_plants.dart';
 
+import 'description_text.dart';
 import 'description_wrapper.dart';
 import 'padding_arrow.dart';
 
@@ -19,6 +21,10 @@ class Body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ArrowPosition(),
+          FeaturePlantCard(
+            image: 'assets/images/bottom_img_1.png',
+          ),
+          DescriptionText(),
           PrincipalInfo(
             image: image,
             title: 'Sun time max 2h.',
