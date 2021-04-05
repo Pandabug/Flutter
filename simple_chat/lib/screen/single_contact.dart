@@ -18,31 +18,40 @@ class SingleContactInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(kDefaultPadding),
-      height: 40,
+      height: 50,
       child: Row(
         children: <Widget>[
-          Image.asset(image),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(45),
+            child: Image.asset(image),
+          ),
           GestureDetector(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.all(kDefaultPadding),
-              child: RichText(
-                text: TextSpan(
-                  children: [
-                    TextSpan(
-                      text: '$title2\n',
-                      style: TextStyle(
-                        fontSize: 12,
-                      ),
+              margin: EdgeInsets.only(left: kDefaultPadding * 2),
+              child: Column(
+                children: <Widget>[
+                  RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: '$title1\n',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                          ),
+                        ),
+                        TextSpan(
+                          text: title2,
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.black54,
+                          ),
+                        ),
+                      ],
                     ),
-                    TextSpan(
-                      text: title2,
-                      style: TextStyle(
-                        fontSize: 9,
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),

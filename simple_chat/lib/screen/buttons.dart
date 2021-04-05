@@ -13,13 +13,10 @@ class ButtonSwitch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.symmetric(
         vertical: kDefaultPadding * 3,
-        horizontal: kDefaultPadding,
       ),
-      width: size.width / 2.23,
       height: 40,
       child: FlatButton(
         shape: RoundedRectangleBorder(
