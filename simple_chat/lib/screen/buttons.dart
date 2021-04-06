@@ -1,6 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:simple_chat/constants.dart';
 
+class ButtonsSelect extends StatelessWidget {
+  const ButtonsSelect({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        ButtonSwitch(
+          title: 'Recent activity',
+          newColor: Colors.black,
+        ),
+        ButtonSwitch(
+          title: 'Reminders',
+          newColor: Colors.grey,
+        ),
+      ],
+    );
+  }
+}
+
 class ButtonSwitch extends StatelessWidget {
   const ButtonSwitch({
     Key key,
@@ -17,6 +40,7 @@ class ButtonSwitch extends StatelessWidget {
       margin: EdgeInsets.symmetric(
         vertical: kDefaultPadding * 3,
       ),
+      width: 125,
       height: 40,
       child: FlatButton(
         shape: RoundedRectangleBorder(

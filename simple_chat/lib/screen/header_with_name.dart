@@ -25,13 +25,14 @@ class HeaderWithName extends StatelessWidget {
               color: kPrimaryColor,
             ),
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: <Widget>[
                 Flexible(
                   child: RichText(
                     text: TextSpan(
                       children: [
                         TextSpan(
-                          text: '\n\n\n\n\n\nGood afternoon, \nAndrew',
+                          text: 'Good afternoon, \nAndrew',
                           style: TextStyle(
                             fontSize: 37,
                             fontWeight: FontWeight.w500,
