@@ -4,7 +4,7 @@ import 'package:travel_page/constants.dart';
 import 'package:travel_page/models/destination_models.dart';
 import 'package:travel_page/screen/recomendation/destionation_recomendation.dart';
 
-class DestionationCarousel extends StatelessWidget {
+class DestinationCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(

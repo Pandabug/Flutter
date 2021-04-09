@@ -9,7 +9,11 @@ class HeaderText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: kDefaultPadding),
+      padding: EdgeInsets.only(
+        top: kDefaultPadding * 3,
+        left: kDefaultPadding,
+        bottom: kDefaultPadding,
+      ),
       child: Row(
         children: <Widget>[
           Flexible(

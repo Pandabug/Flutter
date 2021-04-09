@@ -12,7 +12,10 @@ class DescriptionSeeAll extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: kDefaultPadding * 1.2),
+      padding: EdgeInsets.symmetric(
+        vertical: kDefaultPadding * 1.2,
+        horizontal: kDefaultPadding,
+      ),
       child: Row(
         children: <Widget>[
           Text(

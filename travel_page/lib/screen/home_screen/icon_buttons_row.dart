@@ -6,15 +6,12 @@ import '../../constants.dart';
 class IconButtonsRow extends StatelessWidget {
   const IconButtonsRow({
     Key key,
-    this.image,
   }) : super(key: key);
-
-  final String image;
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         Padding(
           padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 0.5),
@@ -26,7 +23,8 @@ class IconButtonsRow extends StatelessWidget {
               color: Colors.blue[50],
             ),
             child: IconButton(
-              icon: SvgPicture.asset(image, color: Colors.blue),
+              icon: SvgPicture.asset('assets/icons/back_arrow.svg',
+                  color: Colors.blue),
               onPressed: () {},
             ),
           ),
@@ -59,7 +57,8 @@ class IconButtonsRow extends StatelessWidget {
               color: Colors.grey[200],
             ),
             child: IconButton(
-              icon: SvgPicture.asset(image, color: Colors.grey[600]),
+              icon: SvgPicture.asset('assets/icons/back_arrow.svg',
+                  color: Colors.grey[600]),
               onPressed: () {},
             ),
           ),
@@ -74,7 +73,8 @@ class IconButtonsRow extends StatelessWidget {
               color: Colors.grey[200],
             ),
             child: IconButton(
-              icon: SvgPicture.asset(image, color: Colors.grey[600]),
+              icon: SvgPicture.asset('assets/icons/back_arrow.svg',
+                  color: Colors.grey[600]),
               onPressed: () {},
             ),
           ),
