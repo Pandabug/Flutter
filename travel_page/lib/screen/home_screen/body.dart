@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:travel_page/carousel/destionation_carousel.dart';
+import 'package:travel_page/carousel/hotel_carousel.dart';
 import 'package:travel_page/constants.dart';
 
 import 'description_see_all.dart';
@@ -19,7 +21,10 @@ class Body extends StatelessWidget {
           children: <Widget>[
             HeaderText(),
             IconButtonsRow(image: 'assets/icons/back_arrow.svg'),
-            DescriptionSeeAll(title: 'Top Destionation')
+            DescriptionSeeAll(title: 'Top Destionation'),
+            DestionationCarousel(),
+            DescriptionSeeAll(title: 'Exclusive Hotels'),
+            HotelCarousel(),
           ],
         ),
       ),

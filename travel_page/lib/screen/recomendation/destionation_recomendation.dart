@@ -6,25 +6,24 @@ import 'package:travel_page/models/destination_models.dart';
 
 class DestinationScreen extends StatefulWidget {
   DestinationScreen({
-    this.destionation,
-    Destination destination,
+    this.destination,
   });
 
-  final Destination destionation;
+  final Destination destination;
 
   @override
   _DestinationScreenState createState() => _DestinationScreenState();
 }
 
 class _DestinationScreenState extends State<DestinationScreen> {
-  // Text _buildRatingStars(int rating) {
-  //   String stars = '';
-  //   for (int i = 0; i < rating; i++) {
-  //     stars += '⭐ ';
-  //   }
-  //   stars.trim();
-  //   return Text(stars);
-  // }
+  Text _buildRatingStars(int rating) {
+    String stars = '';
+    for (int i = 0; i < rating; i++) {
+      stars += '⭐ ';
+    }
+    stars.trim();
+    return Text(stars);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,11 +45,11 @@ class _DestinationScreenState extends State<DestinationScreen> {
                   ],
                 ),
                 child: Hero(
-                  tag: widget.destionation.imageUrl,
+                  tag: widget.destination.imageUrl,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(30),
                     child: Image(
-                      image: AssetImage(widget.destionation.imageUrl),
+                      image: AssetImage(widget.destination.imageUrl),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -96,7 +95,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      widget.destionation.city,
+                      widget.destination.city,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 35,
@@ -113,7 +112,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                         ),
                         SizedBox(width: 5.0),
                         Text(
-                          widget.destionation.country,
+                          widget.destination.country,
                           style: TextStyle(
                             color: Colors.white70,
                             fontSize: 20,
@@ -141,9 +140,9 @@ class _DestinationScreenState extends State<DestinationScreen> {
                 top: kDefaultPadding * 0.5,
                 bottom: kDefaultPadding * 0.3,
               ),
-              itemCount: widget.destionation.activities.length,
+              itemCount: widget.destination.activities.length,
               itemBuilder: (BuildContext context, int index) {
-                Activity activity = widget.destionation.activities[index];
+                Activity activity = widget.destination.activities[index];
                 return Stack(
                   children: <Widget>[
                     Container(
@@ -201,7 +200,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                                 color: Colors.grey,
                               ),
                             ),
-                            // _buildRatingStars(activity.rating),
+                            _buildRatingStars(activity.rating),
                             SizedBox(height: 10.0),
                             Row(
                               children: <Widget>[
