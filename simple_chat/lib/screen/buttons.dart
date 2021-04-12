@@ -42,21 +42,23 @@ class ButtonSwitch extends StatelessWidget {
       ),
       width: 125,
       height: 40,
-      child: FlatButton(
-        shape: RoundedRectangleBorder(
-          side: BorderSide(
-            width: 1,
-            color: newColor,
-            style: BorderStyle.solid, //setted also as default
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(30),
+        child: TextButton(
+          // BorderSide(
+          //   width: 1,
+          //   color: newColor,
+          //   style: BorderStyle.solid,
+          // ),
+          style: TextButton.styleFrom(
+            primary: Colors.white,
           ),
-          borderRadius: BorderRadius.circular(30),
-        ),
-        color: Colors.white,
-        onPressed: () {},
-        child: Text(
-          title,
-          style: TextStyle(
-            color: newColor,
+          onPressed: () {},
+          child: Text(
+            title,
+            style: TextStyle(
+              color: newColor,
+            ),
           ),
         ),
       ),

@@ -38,26 +38,28 @@ class Body extends StatelessWidget {
               SizedBox(
                 width: size.width / 2,
                 height: 84,
-                child: FlatButton(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(20),
-                      topLeft: Radius.circular(20),
-                    ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(20),
+                    topLeft: Radius.circular(20),
                   ),
-                  color: kPrimaryColor,
-                  onPressed: () {},
-                  child: Text(
-                    'Buy Now',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      primary: kPrimaryColor,
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      'Buy Now',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),
               ),
               Expanded(
-                child: FlatButton(
+                child: TextButton(
                   onPressed: () {
                     Navigator.push(
                       context,

@@ -14,6 +14,7 @@ class MyBottomNavBar extends StatelessWidget {
             Icons.search,
             size: 30,
           ),
+          // ignore: deprecated_member_use
           title: SizedBox.shrink(),
         ),
         BottomNavigationBarItem(
@@ -21,6 +22,7 @@ class MyBottomNavBar extends StatelessWidget {
             Icons.local_pizza,
             size: 30,
           ),
+          // ignore: deprecated_member_use
           title: SizedBox.shrink(),
         ),
         BottomNavigationBarItem(
@@ -28,6 +30,7 @@ class MyBottomNavBar extends StatelessWidget {
             Icons.search,
             size: 30,
           ),
+          // ignore: deprecated_member_use
           title: SizedBox.shrink(),
         ),
       ],

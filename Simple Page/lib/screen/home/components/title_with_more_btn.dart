@@ -20,15 +20,15 @@ class TitleWithMoreBtn extends StatelessWidget {
         children: [
           TitleWithCustomUnderline(text: title),
           Spacer(),
-          FlatButton(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            color: kPrimaryColor,
-            onPressed: press,
-            child: Text(
-              'More',
-              style: TextStyle(color: Colors.white),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: TextButton(
+              style: TextButton.styleFrom(backgroundColor: kPrimaryColor),
+              onPressed: () {},
+              child: Text(
+                'More',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           )
         ],

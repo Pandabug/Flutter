@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_page/constants.dart';
+
+import '../../constants.dart';
 
 class HeaderText extends StatelessWidget {
   const HeaderText({

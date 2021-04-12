@@ -4,6 +4,8 @@ import 'package:travel_page/constants.dart';
 import 'package:travel_page/models/activity_models.dart';
 import 'package:travel_page/models/destination_models.dart';
 
+import '../../constants.dart';
+
 class DestinationScreen extends StatefulWidget {
   DestinationScreen({
     this.destination,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:travel_page/constants.dart';
-import 'package:travel_page/screen/screen.dart';
+
+import 'constants.dart';
+import 'screen/screen.dart';
 
 void main() {
   runApp(HomePage());

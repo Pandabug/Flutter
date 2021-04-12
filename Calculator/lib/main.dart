@@ -78,20 +78,20 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
     return Container(
       height: MediaQuery.of(context).size.height * .1 * buttonHeight,
       color: buttonColor,
-      child: FlatButton(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(0.0),
-          side: BorderSide(
-              color: Colors.white, width: 1, style: BorderStyle.solid),
-        ),
-        padding: EdgeInsets.all(16.0),
-        onPressed: () => buttonPress(buttonText),
-        child: Text(
-          buttonText,
-          style: TextStyle(
-              fontSize: 30.0,
-              fontWeight: FontWeight.normal,
-              color: Colors.white),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10.0),
+        child: TextButton(
+          style: TextButton.styleFrom(
+            primary: Colors.white,
+          ),
+          onPressed: () => buttonPress(buttonText),
+          child: Text(
+            buttonText,
+            style: TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.normal,
+                color: Colors.white),
+          ),
         ),
       ),
     );
