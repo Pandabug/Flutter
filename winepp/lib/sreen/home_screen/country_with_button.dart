@@ -22,7 +22,7 @@ class CountryWithButton extends StatelessWidget {
           ),
           Text(
             'Corso Italia, 20122 Milano MI, Italia',
-            style: TextStyle(fontSize: 15),
+            style: TextStyle(fontSize: 14),
           ),
           Spacer(),
           TextButton(
