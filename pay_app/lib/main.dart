@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pay_app/data.dart';
 
 import 'widgets/card_section.dart';
+import 'widgets/expenses.dart';
 import 'widgets/header.dart';
 
 void main() {
@@ -25,7 +26,7 @@ class HomePage extends StatelessWidget {
             child: WalletHead(),
           ),
           Expanded(child: CardSection()),
-          Expanded(child: Container())
+          Expanded(child: ExpensesSection())
         ],
       ),
     );
