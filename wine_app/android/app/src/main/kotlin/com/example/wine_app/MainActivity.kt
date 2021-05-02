@@ -1,4 +1,4 @@
-package com.example.winepp
+package com.example.wine_app
 
 import io.flutter.embedding.android.FlutterActivity
 

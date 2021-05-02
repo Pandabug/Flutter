@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:winepp/constants.dart';
 
+import 'constants.dart';
 import 'sreen/screen.dart';
 
 void main() {

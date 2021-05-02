@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.winepp">
+    package="com.example.wine_app">
    <application
-        android:label="winepp"
+        android:label="wine_app"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
