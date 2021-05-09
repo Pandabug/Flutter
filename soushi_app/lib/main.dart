@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:soushi_app/constants.dart';
 import 'package:soushi_app/screen/body.dart';
 
+import 'bottom bar/bottom_nav_bar.dart';
+
 void main() {
   runApp(
     MaterialApp(
@@ -18,6 +20,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: kBackgroundColor,
       body: Body(),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }
