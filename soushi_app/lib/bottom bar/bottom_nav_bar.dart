@@ -54,18 +54,24 @@ class SingleButtonCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        IconButton(
-          icon: Icon(icon),
+        TextButton(
           onPressed: () {},
-          color: color,
-          iconSize: 25,
-        ),
-        Text(
-          title,
-          style: TextStyle(
-            color: color,
-            fontSize: 12,
-            fontWeight: FontWeight.bold,
+          child: Column(
+            children: <Widget>[
+              Icon(
+                icon,
+                size: 25,
+                color: color,
+              ),
+              Text(
+                title,
+                style: TextStyle(
+                  color: color,
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
         ),
       ],

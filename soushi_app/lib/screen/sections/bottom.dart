@@ -133,6 +133,10 @@ class SoushiRecomendation extends StatelessWidget {
           child: Container(
             width: size.width,
             height: size.height * 0.1,
+            padding: EdgeInsets.symmetric(
+              vertical: 10,
+              horizontal: 10,
+            ),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(10),
@@ -140,31 +144,25 @@ class SoushiRecomendation extends StatelessWidget {
               ),
               color: Colors.white,
             ),
-            child: Container(
-              margin: EdgeInsets.symmetric(
-                vertical: 10,
-                horizontal: 10,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    'Magic Box - $title',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  'Magic Box - $title',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
                   ),
-                  SizedBox(height: 5),
-                  Text(
-                    timeOpen,
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey,
-                    ),
+                ),
+                SizedBox(height: 5),
+                Text(
+                  timeOpen,
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.grey,
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
