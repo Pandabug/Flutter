@@ -14,7 +14,7 @@ class FirstPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        SizedBox(height: 70),
+        SizedBox(height: 50),
         Center(
           child: Text(
             'Welcome to edu'.toUpperCase(),

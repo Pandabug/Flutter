@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:simplepage/costants.dart';
 import 'package:simplepage/screen/details/screen%20details/plant_description.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
-// import 'package:simplepage/costants.dart';
 
-// import 'icon_card.dart';
+import '../../../costants.dart';
 import 'image_and_icons.dart';
 import 'title_and_price.dart';
 
@@ -51,7 +48,7 @@ class Body extends StatelessWidget {
                     child: Text(
                       'Buy Now',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.lightGreenAccent[900],
                         fontSize: 16,
                       ),
                     ),

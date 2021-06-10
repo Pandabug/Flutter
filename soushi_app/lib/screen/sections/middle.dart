@@ -11,7 +11,7 @@ class ButtonsSwitch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         ButtonSwitchCard(
           size: size,

@@ -23,8 +23,7 @@ class IconButtonsRow extends StatelessWidget {
               color: Colors.blue[50],
             ),
             child: IconButton(
-              icon: SvgPicture.asset('assets/icons/back_arrow.svg',
-                  color: Colors.blue),
+              icon: Icon(Icons.align_vertical_top_outlined, color: Colors.blue),
               onPressed: () {},
             ),
           ),
@@ -57,8 +56,7 @@ class IconButtonsRow extends StatelessWidget {
               color: Colors.grey[200],
             ),
             child: IconButton(
-              icon: SvgPicture.asset('assets/icons/back_arrow.svg',
-                  color: Colors.grey[600]),
+              icon: Icon(Icons.shopping_cart, color: Colors.grey[600]),
               onPressed: () {},
             ),
           ),
@@ -73,8 +71,7 @@ class IconButtonsRow extends StatelessWidget {
               color: Colors.grey[200],
             ),
             child: IconButton(
-              icon: SvgPicture.asset('assets/icons/back_arrow.svg',
-                  color: Colors.grey[600]),
+              icon: Icon(Icons.bookmark_border, color: Colors.grey[600]),
               onPressed: () {},
             ),
           ),
