@@ -18,7 +18,7 @@ class Recomendation {
   });
 }
 
-List<Recomendation> recomendation = [
+List<Recomendation> recomendations = [
   Recomendation(
     image1: 'assets/images/soushi_recomendation1.jpg',
     image2: 'assets/images/bastoncini.jpg',
