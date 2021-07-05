@@ -11,8 +11,20 @@ class Body extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: <Widget>[
-          HeaderTextInput(size: size),
-          ToDo(),
+          Container(
+            height: size.height,
+            child: Stack(
+              children: <Widget>[
+                HeaderTextInput(size: size),
+                Positioned(
+                  width: size.width,
+                  top: size.height * 0.35,
+                  left: size.width * 0.06,
+                  child: ToDo(size: size),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

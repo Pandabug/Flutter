@@ -43,20 +43,18 @@ class HeaderTextInput extends StatelessWidget {
               borderRadius: BorderRadius.circular(30),
               color: Colors.white,
             ),
-            child: Expanded(
-              child: TextField(
-                onChanged: (value) => {},
-                decoration: InputDecoration(
-                  icon: Icon(
-                    Icons.search,
-                    size: 30,
-                    color: Colors.grey,
-                  ),
-                  hintText: 'Search',
-                  hintStyle: TextStyle(color: Colors.grey),
-                  enabledBorder: InputBorder.none,
-                  focusedBorder: InputBorder.none,
+            child: TextField(
+              onChanged: (value) => {},
+              decoration: InputDecoration(
+                icon: Icon(
+                  Icons.search,
+                  size: 30,
+                  color: Colors.grey,
                 ),
+                hintText: 'Search',
+                hintStyle: TextStyle(color: Colors.grey),
+                enabledBorder: InputBorder.none,
+                focusedBorder: InputBorder.none,
               ),
             ),
           ),
