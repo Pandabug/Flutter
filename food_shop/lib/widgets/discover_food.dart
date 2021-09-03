@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_shop/screens/info_food_page.dart';
 
 class DiscoverFood extends StatelessWidget {
   const DiscoverFood({
@@ -34,21 +35,25 @@ class DiscoverFood extends StatelessWidget {
           child: Row(
             children: <Widget>[
               FoodList(
-                  image: AssetImage('assets/Scoops.jpg'),
-                  title: 'Scoops',
-                  price: '5'),
+                image: AssetImage('assets/Scoops.jpg'),
+                title: 'Scoops',
+                price: '5',
+              ),
               FoodList(
-                  image: AssetImage('assets/Popsicles.jpg'),
-                  title: 'Popsicles',
-                  price: '10'),
+                image: AssetImage('assets/Popsicles.jpg'),
+                title: 'Popsicles',
+                price: '10',
+              ),
               FoodList(
-                  image: AssetImage('assets/Scoops.jpg'),
-                  title: 'Popsicles',
-                  price: '7'),
+                image: AssetImage('assets/Scoops.jpg'),
+                title: 'Popsicles',
+                price: '7',
+              ),
               FoodList(
-                  image: AssetImage('assets/Popsicles.jpg'),
-                  title: 'Scoops',
-                  price: '12'),
+                image: AssetImage('assets/Popsicles.jpg'),
+                title: 'Scoops',
+                price: '12',
+              ),
             ],
           ),
         ),
@@ -72,41 +77,56 @@ class FoodList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
-        Container(
-          height: 230,
-          width: 160,
-          margin: EdgeInsets.symmetric(horizontal: 10),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            color: Colors.white,
-          ),
-          child: Column(
-            children: <Widget>[
-              SizedBox(height: 40),
-              Container(
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: image,
-                    fit: BoxFit.cover,
-                  ),
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => InfoFoodPage(
+                  title: title,
+                  price: price,
+                  image: image,
                 ),
               ),
-            ],
+            );
+          },
+          child: Container(
+            height: 230,
+            width: 160,
+            margin: EdgeInsets.symmetric(horizontal: 10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              color: Colors.white,
+            ),
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 40),
+                Container(
+                  width: 100,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: image,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
         Positioned(
           top: 10,
-          right: 10,
+          right: 15,
           child: Icon(
             Icons.favorite_border_sharp,
+            size: 22,
           ),
         ),
         Positioned(
           bottom: 15,
-          left: 30,
+          left: 45,
           child: Column(
             children: <Widget>[
               Text(
