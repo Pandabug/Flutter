@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:food_shop/provider.dart';
 
 import 'package:food_shop/screens/body.dart';
-import 'package:food_shop/screens/info_food_page.dart';
+import 'package:food_shop/screens/chat_page.dart';
 import 'package:food_shop/screens/my_cart_list.dart';
+import 'package:food_shop/screens/profile_page.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Food Shop',
-      home: HomePage(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => FoodInfos(),
+        ),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Food Shop',
+        home: HomePage(),
+      ),
     ),
   );
 }
@@ -26,8 +36,9 @@ class _HomePageState extends State<HomePage> {
 
   List<Widget> _widgetOptions = <Widget>[
     Body(),
-    InfoFoodPage(),
+    ChatPage(),
     CartList(),
+    ProfilePage(),
   ];
 
   void _onItemTap(int index) {
@@ -45,9 +56,11 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
+      extendBody: true,
       bottomNavigationBar: Container(
         height: 80,
-        margin: EdgeInsets.only(
+        color: Colors.transparent,
+        padding: EdgeInsets.only(
           left: 5,
           right: 5,
           bottom: 5,

@@ -37,22 +37,22 @@ class DiscoverFood extends StatelessWidget {
               FoodList(
                 image: AssetImage('assets/Scoops.jpg'),
                 title: 'Scoops',
-                price: '5',
+                price: 5,
               ),
               FoodList(
                 image: AssetImage('assets/Popsicles.jpg'),
                 title: 'Popsicles',
-                price: '10',
+                price: 10,
               ),
               FoodList(
                 image: AssetImage('assets/Scoops.jpg'),
-                title: 'Popsicles',
-                price: '7',
+                title: 'Ice Cream',
+                price: 7,
               ),
               FoodList(
-                image: AssetImage('assets/Popsicles.jpg'),
-                title: 'Scoops',
-                price: '12',
+                image: AssetImage('assets/Candy.jpg'),
+                title: 'Candys',
+                price: 12,
               ),
             ],
           ),
@@ -70,7 +70,8 @@ class FoodList extends StatelessWidget {
     required this.image,
   }) : super(key: key);
 
-  final String title, price;
+  final String title;
+  final int price;
   final AssetImage image;
 
   @override
