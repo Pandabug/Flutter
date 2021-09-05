@@ -7,36 +7,42 @@ class ChatPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
-        AppBar(
-          backgroundColor: Colors.black,
-          centerTitle: false,
-          title: Text(
-            'Messages',
-            style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
+        SafeArea(
+          child: Column(
+            children: <Widget>[
+              AppBar(
+                backgroundColor: Colors.black,
+                centerTitle: false,
+                title: Text(
+                  'Messages',
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                actions: [
+                  Icon(Icons.search, size: 30),
+                  SizedBox(width: 16),
+                  Icon(Icons.settings, size: 30),
+                  SizedBox(width: 16),
+                ],
+              ),
+              ChatCard(title: 'Niccolo Fato', text: 'Ciao'),
+              ChatCard(title: '+3342371234', text: 'orco dio!'),
+              ChatCard(title: 'Manzoni Lucche', text: 'Some random text!!'),
+              ChatCard(title: 'Niccolo Fato', text: 'Ciao'),
+              ChatCard(title: '+3342371234', text: 'orco dio!'),
+              ChatCard(title: 'Manzoni Lucche', text: 'Some random text!!'),
+              ChatCard(title: 'Antonio Regni', text: 'Hello!'),
+              ChatCard(title: 'Manzoni Lucche', text: 'Some random text!!'),
+              ChatCard(title: 'Antonio Regni', text: 'Hello!'),
+              ChatCard(title: 'Niccolo Fato', text: 'Ciao'),
+              ChatCard(title: 'Antonio Regni', text: 'Hello!'),
+              ChatCard(title: '+3342371234', text: 'orco dio!'),
+            ],
           ),
-          actions: [
-            Icon(Icons.search, size: 30),
-            SizedBox(width: 16),
-            Icon(Icons.settings, size: 30),
-            SizedBox(width: 16),
-          ],
         ),
-        ChatCard(title: 'Niccolo Fato', text: 'Ciao'),
-        ChatCard(title: '+3342371234', text: 'orco dio!'),
-        ChatCard(title: 'Manzoni Lucche', text: 'Some random text!!'),
-        ChatCard(title: 'Niccolo Fato', text: 'Ciao'),
-        ChatCard(title: '+3342371234', text: 'orco dio!'),
-        ChatCard(title: 'Manzoni Lucche', text: 'Some random text!!'),
-        ChatCard(title: 'Antonio Regni', text: 'Hello!'),
-        ChatCard(title: 'Manzoni Lucche', text: 'Some random text!!'),
-        ChatCard(title: 'Antonio Regni', text: 'Hello!'),
-        ChatCard(title: 'Niccolo Fato', text: 'Ciao'),
-        ChatCard(title: 'Antonio Regni', text: 'Hello!'),
-        ChatCard(title: '+3342371234', text: 'orco dio!'),
       ],
     );
   }

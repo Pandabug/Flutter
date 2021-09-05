@@ -10,35 +10,42 @@ class WeRecommend extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Text(
-          'We Recommend',
-          style: TextStyle(
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
+        Padding(
+          padding: EdgeInsets.only(left: 10),
+          child: Text(
+            'We Recommend',
+            style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: <Widget>[
+              SizedBox(width: 10),
               RecommendFood(
                 image: 'assets/Scoops.jpg',
                 title: 'Japanese',
                 price: 10,
                 stars: 4,
               ),
+              SizedBox(width: 10),
               RecommendFood(
                 image: 'assets/Popsicles.jpg',
                 title: 'Japanese',
                 price: 2,
                 stars: 3,
               ),
+              SizedBox(width: 10),
               RecommendFood(
                 image: 'assets/Scoops.jpg',
                 title: 'Italian',
                 price: 2,
                 stars: 4,
               ),
+              SizedBox(width: 10),
             ],
           ),
         ),
@@ -79,7 +86,7 @@ class RecommendFood extends StatelessWidget {
           margin: EdgeInsets.only(
             left: 35,
             top: 20,
-            right: 10,
+            right: 0,
             bottom: 20,
           ),
           decoration: BoxDecoration(

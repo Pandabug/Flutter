@@ -11,11 +11,14 @@ class DiscoverFood extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Text(
-          'Discover food',
-          style: TextStyle(
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
+        Padding(
+          padding: EdgeInsets.only(left: 10),
+          child: Text(
+            'Discover food',
+            style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         SizedBox(height: 10),
@@ -23,9 +26,13 @@ class DiscoverFood extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: <Widget>[
+              SizedBox(width: 10),
               FoodDiscover(title: 'Vanilla flaviour'),
+              SizedBox(width: 10),
               FoodDiscover(title: 'Chocolate flavior'),
+              SizedBox(width: 10),
               FoodDiscover(title: 'Chocolate milk'),
+              SizedBox(width: 10),
             ],
           ),
         ),
@@ -34,30 +41,77 @@ class DiscoverFood extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: <Widget>[
+              SizedBox(width: 10),
               FoodList(
                 image: AssetImage('assets/Scoops.jpg'),
                 title: 'Scoops',
                 price: 5,
               ),
+              SizedBox(width: 10),
               FoodList(
                 image: AssetImage('assets/Popsicles.jpg'),
                 title: 'Popsicles',
                 price: 10,
               ),
+              SizedBox(width: 10),
               FoodList(
                 image: AssetImage('assets/Scoops.jpg'),
                 title: 'Ice Cream',
                 price: 7,
               ),
+              SizedBox(width: 10),
               FoodList(
                 image: AssetImage('assets/Candy.jpg'),
                 title: 'Candys',
                 price: 12,
               ),
+              SizedBox(width: 10),
             ],
           ),
         ),
       ],
+    );
+  }
+}
+
+class FoodDiscover extends StatelessWidget {
+  const FoodDiscover({
+    Key? key,
+    required this.title,
+  }) : super(key: key);
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 40,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        color: Colors.white,
+      ),
+      child: Padding(
+        padding: EdgeInsets.only(
+          left: 20,
+          right: 10,
+        ),
+        child: Row(
+          children: <Widget>[
+            Text(
+              title,
+              style: TextStyle(
+                fontSize: 13,
+              ),
+            ),
+            SizedBox(width: 10),
+            Icon(
+              Icons.close,
+              size: 17,
+              color: Colors.black,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -77,6 +131,7 @@ class FoodList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      alignment: Alignment.center,
       children: <Widget>[
         GestureDetector(
           onTap: () {
@@ -94,7 +149,6 @@ class FoodList extends StatelessWidget {
           child: Container(
             height: 230,
             width: 160,
-            margin: EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
               color: Colors.white,
@@ -127,7 +181,6 @@ class FoodList extends StatelessWidget {
         ),
         Positioned(
           bottom: 15,
-          left: 45,
           child: Column(
             children: <Widget>[
               Text(
@@ -159,49 +212,6 @@ class FoodList extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-}
-
-class FoodDiscover extends StatelessWidget {
-  const FoodDiscover({
-    Key? key,
-    required this.title,
-  }) : super(key: key);
-
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 40,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
-        color: Colors.white,
-      ),
-      margin: EdgeInsets.symmetric(horizontal: 3),
-      child: Padding(
-        padding: EdgeInsets.only(
-          left: 20,
-          right: 10,
-        ),
-        child: Row(
-          children: <Widget>[
-            Text(
-              title,
-              style: TextStyle(
-                fontSize: 13,
-              ),
-            ),
-            SizedBox(width: 10),
-            Icon(
-              Icons.close,
-              size: 17,
-              color: Colors.black,
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
