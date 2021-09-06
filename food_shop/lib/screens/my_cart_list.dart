@@ -28,11 +28,6 @@ class _CartListState extends State<CartList> {
               children: <Widget>[
                 Row(
                   children: <Widget>[
-                    Icon(
-                      Icons.arrow_back_sharp,
-                      size: 30,
-                    ),
-                    SizedBox(width: 20),
                     Text(
                       'Cart',
                       style: TextStyle(

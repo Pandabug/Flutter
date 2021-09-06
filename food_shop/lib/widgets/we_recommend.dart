@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_shop/screens/info_food_page.dart';
 
 class WeRecommend extends StatelessWidget {
   const WeRecommend({
@@ -26,21 +27,21 @@ class WeRecommend extends StatelessWidget {
             children: <Widget>[
               SizedBox(width: 10),
               RecommendFood(
-                image: 'assets/Scoops.jpg',
+                image: AssetImage('assets/Scoops.jpg'),
                 title: 'Japanese',
                 price: 10,
                 stars: 4,
               ),
               SizedBox(width: 10),
               RecommendFood(
-                image: 'assets/Popsicles.jpg',
+                image: AssetImage('assets/Popsicles.jpg'),
                 title: 'Japanese',
                 price: 2,
                 stars: 3,
               ),
               SizedBox(width: 10),
               RecommendFood(
-                image: 'assets/Scoops.jpg',
+                image: AssetImage('assets/Scoops.jpg'),
                 title: 'Italian',
                 price: 2,
                 stars: 4,
@@ -63,8 +64,9 @@ class RecommendFood extends StatelessWidget {
     required this.stars,
   }) : super(key: key);
 
-  final String image, title;
+  final String title;
   final int price, stars;
+  final AssetImage image;
 
   Text _buildRatingStars(int rating) {
     String stars = '';
@@ -78,79 +80,90 @@ class RecommendFood extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        Container(
-          height: 100,
-          width: 210,
-          margin: EdgeInsets.only(
-            left: 35,
-            top: 20,
-            right: 0,
-            bottom: 20,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => InfoFoodPage(
+              title: title,
+              price: price,
+              image: image,
+            ),
           ),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20.0),
-          ),
-          child: Padding(
-            padding: EdgeInsets.only(
-              left: 80,
-              top: 10,
+        );
+      },
+      child: Stack(
+        children: <Widget>[
+          Container(
+            height: 100,
+            width: 210,
+            margin: EdgeInsets.only(
+              left: 35,
+              top: 20,
               right: 0,
               bottom: 20,
             ),
-            child: Column(
-              children: <Widget>[
-                Text(
-                  title,
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Text(
-                  'Starting From',
-                  style: TextStyle(
-                    fontSize: 13,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-                SizedBox(height: 10.0),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    Text(
-                      '\$$price',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    // Spacer(),
-                    _buildRatingStars(stars),
-                  ],
-                ),
-              ],
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20.0),
             ),
-          ),
-        ),
-        Positioned(
-          left: 0,
-          top: 15,
-          bottom: 15,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(60),
-            child: Image(
-              width: 110,
-              image: AssetImage(
-                image,
+            child: Padding(
+              padding: EdgeInsets.only(
+                left: 80,
+                top: 10,
+                right: 0,
+                bottom: 20,
               ),
-              fit: BoxFit.cover,
+              child: Column(
+                children: <Widget>[
+                  Text(
+                    title,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'Starting From',
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  SizedBox(height: 10.0),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Text(
+                        '\$$price',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      _buildRatingStars(stars),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-      ],
+          Positioned(
+            left: 0,
+            top: 15,
+            bottom: 15,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(60),
+              child: Image(
+                width: 110,
+                image: image,
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -130,23 +130,23 @@ class FoodList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.center,
-      children: <Widget>[
-        GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => InfoFoodPage(
-                  title: title,
-                  price: price,
-                  image: image,
-                ),
-              ),
-            );
-          },
-          child: Container(
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => InfoFoodPage(
+              title: title,
+              price: price,
+              image: image,
+            ),
+          ),
+        );
+      },
+      child: Stack(
+        alignment: Alignment.center,
+        children: <Widget>[
+          Container(
             height: 230,
             width: 160,
             decoration: BoxDecoration(
@@ -170,48 +170,51 @@ class FoodList extends StatelessWidget {
               ],
             ),
           ),
-        ),
-        Positioned(
-          top: 10,
-          right: 15,
-          child: Icon(
-            Icons.favorite_border_sharp,
-            size: 22,
-          ),
-        ),
-        Positioned(
-          bottom: 15,
-          child: Column(
-            children: <Widget>[
-              Text(
-                title,
-                style: TextStyle(
-                  fontSize: 17,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
+          Positioned(
+            top: 0,
+            right: 0,
+            child: IconButton(
+              icon: Icon(
+                Icons.favorite_border_sharp,
+                size: 22,
               ),
-              Text(
-                'Starting From',
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.grey,
-                ),
-              ),
-              SizedBox(height: 5),
-              Text(
-                '\$$price',
-                style: TextStyle(
-                  fontSize: 17,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-              )
-            ],
+              onPressed: () {},
+            ),
           ),
-        ),
-      ],
+          Positioned(
+            bottom: 15,
+            child: Column(
+              children: <Widget>[
+                Text(
+                  title,
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                ),
+                Text(
+                  'Starting From',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.grey,
+                  ),
+                ),
+                SizedBox(height: 5),
+                Text(
+                  '\$$price',
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                )
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
