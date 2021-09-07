@@ -149,7 +149,7 @@ class ProfilePage extends StatelessWidget {
                             color: Colors.grey,
                           ),
                           image: DecorationImage(
-                            image: AssetImage('assets/Candy.jpg'),
+                            image: AssetImage('assets/pb.jpg'),
                             fit: BoxFit.cover,
                           ),
                         ),

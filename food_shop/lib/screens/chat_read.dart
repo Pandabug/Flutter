@@ -73,7 +73,7 @@ class ChatRead extends StatelessWidget {
                 UserMessages(text: 'I hope I will meet you again!'),
                 UserMessages(
                     text:
-                        'The last summer was great I hope we will meet again soon!'),
+                        'The last summer was great I hope we will meet soon!'),
               ],
             ),
           ),
