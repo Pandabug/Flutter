@@ -15,9 +15,11 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-<img src=".\assets\Food Shoop1.jpg" width=99.2%>
-<div>
-    <img src=".\assets\Food Shoop2.png" width=32.8%>
-    <img src=".\assets\Food Shoop3.png" width=32.8%>
-    <img src=".\assets\Food Shoop4.png" width=32.8%>
+<div align='center'>
+    <img src=".\assets\Food Shoop1.jpg" width=98.3%>
+    <div>
+        <img src=".\assets\Food Shoop2.png" width=32.5%>
+        <img src=".\assets\Food Shoop3.png" width=32.5%>
+        <img src=".\assets\Food Shoop4.png" width=32.5%>
+    </div>
 </div>
