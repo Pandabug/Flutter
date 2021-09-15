@@ -6,13 +6,14 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
       child: Column(
         children: <Widget>[
           Stack(
             alignment: AlignmentDirectional.center,
             children: <Widget>[
               Column(
-                children: [
+                children: <Widget>[
                   Container(
                     height: 300.0,
                     decoration: BoxDecoration(
