@@ -29,31 +29,32 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.black,
         actions: [
           SizedBox(
-              width: 30,
-              height: 30,
-              child: Stack(
-                fit: StackFit.expand,
-                children: [
-                  const Icon(Icons.notifications_outlined),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8),
-                    child: Align(
-                      alignment: Alignment.topRight,
-                      child: Container(
-                        width: 15,
-                        height: 15,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.red,
-                        ),
-                        child: const Center(
-                          child: Text('1'),
-                        ),
+            width: 30,
+            height: 30,
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                const Icon(Icons.notifications_outlined),
+                Padding(
+                  padding: const EdgeInsets.only(top: 8),
+                  child: Align(
+                    alignment: Alignment.topRight,
+                    child: Container(
+                      width: 15,
+                      height: 15,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.red,
+                      ),
+                      child: const Center(
+                        child: Text('1'),
                       ),
                     ),
                   ),
-                ],
-              )),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
       body: Column(
