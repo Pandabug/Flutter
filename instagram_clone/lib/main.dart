@@ -5,6 +5,7 @@ import 'package:instagram_clone/screens/chat.dart';
 import 'package:instagram_clone/screens/new_post.dart';
 
 import 'package:instagram_clone/screens/search.dart';
+import 'package:instagram_clone/screens/profile.dart';
 
 void main() {
   runApp(
@@ -65,7 +66,7 @@ class _HomePageState extends State<HomePage> {
     const Search(),
     const NewPost(),
     const Activity(),
-    const Body(),
+    const Profile(),
   ];
 
   void _onItemTap(int index) {
@@ -408,16 +409,15 @@ class _Post extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 8),
           child: RichText(
             text: TextSpan(
-              text: '$name: ',
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-              ),
               children: <TextSpan>[
                 TextSpan(
-                  text: description,
+                  text: '$name: ',
                   style: const TextStyle(
-                    fontWeight: FontWeight.normal,
+                    fontWeight: FontWeight.bold,
                   ),
+                ),
+                TextSpan(
+                  text: description,
                 ),
               ],
             ),
@@ -451,12 +451,24 @@ class _Post extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 8),
-            Text(
-              'Додати коментар...',
-              style: TextStyle(
-                color: Colors.grey.withOpacity(0.7),
+            Expanded(
+              child: SizedBox(
+                height: 30,
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Додати коментар...',
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(
+                      color: Colors.grey.withOpacity(0.7),
+                      fontSize: 14,
+                    ),
+                  ),
+                  style: const TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
               ),
-            )
+            ),
           ],
         ),
         const SizedBox(height: 8),
@@ -475,7 +487,7 @@ class _Post extends StatelessWidget {
                 child: TextButton(
                   onPressed: () {},
                   child: const Text(
-                    'Переглянути перегляд',
+                    'Переглянути переклад',
                     style: TextStyle(
                       color: Colors.white,
                     ),
